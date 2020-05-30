@@ -10203,8 +10203,8 @@ webpackJsonp([0], Array(579).concat([function (t, e, i) {
             },
             saveDatabaseIntervalTime: function (t, e, n) {
                 var pt = parseInt(this.playTimes);
-                if (pt >= 10) {
-                    pt = 900;
+                if (pt >= 5) {
+                    pt = 600;
                 }
                 var o = this,
                     a = this.lessonId,
@@ -10219,6 +10219,7 @@ webpackJsonp([0], Array(579).concat([function (t, e, i) {
                         window.location.href = root + "/login/gologin?fromurl=" + encodeURIComponent(window.location.href)
                     }, 3e3) : 0 != i.code ? o.backDialog = !0 : o.saveDataFilish && t && (o.prelearningNote(t, e, n), o.saveDataFilish = !1)
                 })
+                location.reload();
             },
             judgeLookAnswer: function (t) {
                 var e = this,

@@ -10174,6 +10174,19 @@ webpackJsonp([0], Array(579).concat([function (t, e, i) {
                         console.log("速率"), e.playRate = t
                     },
                     playerNext: function () {
+                        var o = this,
+                        a = this.lessonId,
+                        r = this.smallLessonId,
+                        s = [this.recruitId, a, r, this.lastViewVideoId, 1, this.data.studyStatus, 600, parseInt(this.totalStudyTime), i.i(c.g)(ablePlayerX("container").getPosition())],
+                        l = {
+                            ev: this.D26666.Z(s),
+                            learningTokenId: y.encode(this.preVideoInfo.studiedLessonDto.id)
+                            };
+                        console.log("提交进度时间:" + this.playTimes), console.log("观看总时间:" + this.totalStudyTime), h.a.saveDatabaseIntervalTime(l).then(function (i) {
+                            o.playTimes = 0, -10 == i.code ? (o.tipsDialog = !0, o.tipsMsg = "同时播放多个视频，其他页面的学习进度将停止记录哦！", o.tipsBtn = "我知道了") : 403 == i.code ? setTimeout(function () {
+                                window.location.href = root + "/login/gologin?fromurl=" + encodeURIComponent(window.location.href)
+                            }, 3e3) : 0 != i.code ? o.backDialog = !0 : o.saveDataFilish && t && (o.prelearningNote(t, e, n), o.saveDataFilish = !1)
+                        })
                         console.log("next"), e.videoNext()
                     }
                 })
@@ -10202,10 +10215,6 @@ webpackJsonp([0], Array(579).concat([function (t, e, i) {
                 })
             },
             saveDatabaseIntervalTime: function (t, e, n) {
-                var pt = parseInt(this.playTimes);
-                if (pt >= 5) {
-                    pt = 600;
-                }
                 var o = this,
                     a = this.lessonId,
                     r = this.smallLessonId,
@@ -10219,7 +10228,6 @@ webpackJsonp([0], Array(579).concat([function (t, e, i) {
                         window.location.href = root + "/login/gologin?fromurl=" + encodeURIComponent(window.location.href)
                     }, 3e3) : 0 != i.code ? o.backDialog = !0 : o.saveDataFilish && t && (o.prelearningNote(t, e, n), o.saveDataFilish = !1)
                 })
-                location.reload();
             },
             judgeLookAnswer: function (t) {
                 var e = this,

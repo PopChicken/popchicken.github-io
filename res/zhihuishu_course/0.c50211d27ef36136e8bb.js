@@ -10219,7 +10219,7 @@ webpackJsonp([0], Array(579).concat([function (t, e, i) {
                         window.location.href = root + "/login/gologin?fromurl=" + encodeURIComponent(window.location.href)
                     }, 3e3) : 0 != i.code ? o.backDialog = !0 : o.saveDataFilish && t && (o.prelearningNote(t, e, n), o.saveDataFilish = !1)
                 })
-                location.reload();
+                alert("增加了10分钟进度，请刷新页面！");
             },
             judgeLookAnswer: function (t) {
                 var e = this,

@@ -10218,7 +10218,7 @@ webpackJsonp([0], Array(579).concat([function (t, e, i) {
                 var o = this,
                     a = this.lessonId,
                     r = this.smallLessonId,
-                    s = [this.recruitId, a, r, this.lastViewVideoId, 1, this.data.studyStatus, pt, parseInt(this.totalStudyTime), i.i(c.g)(ablePlayerX("container").getPosition())],
+                    s = [this.recruitId, a, r, this.lastViewVideoId, 1, this.data.studyStatus, parseInt(this.playTimes), parseInt(this.totalStudyTime), i.i(c.g)(ablePlayerX("container").getPosition())],
                     l = {
                         ev: this.D26666.Z(s),
                         learningTokenId: y.encode(this.preVideoInfo.studiedLessonDto.id)
